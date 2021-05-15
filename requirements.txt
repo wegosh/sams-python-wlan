@@ -1,0 +1,12 @@
+getmac==0.8.2
+httplib2==0.18.1
+IPy==1.1
+lockfile==0.12.2
+manuf==1.1.1
+netifaces==0.10.4
+pylint==2.6.0
+pyOpenSSL==20.0.1
+requests==2.23.0
+scapy==2.4.4
+rssi==1.0.2
+schedule==1.1.0
