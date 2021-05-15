@@ -18,7 +18,7 @@ import os
 
 current_network_interface = netifaces.gateways()['default'][netifaces.AF_INET][1]
 DOMAIN = "wegorz.uk"
-#DOMAIN = "127.0.0.1"
+#DOMAIN = "127.0.0.1" #Debugging only
 
 async def clear_arp(ip, interface_name=''):
     while True:
@@ -75,7 +75,6 @@ def get_mac_address_list(ip_address = '192.168.1.1', i_range = [1, 255], hide_em
             mac_dict['device'] = "Not available"
             mac_dict['mac'] = mac_addr
             mac_address_list.append(mac_dict)
-    #print(mac_address_list)
     print('ARP table len: ', len(mac_address_list))
     return mac_address_list
 
@@ -183,8 +182,7 @@ def write_data_to_file(dict_arr = [], duration = 0):
                         single_dict['duration'] = duration
                         single_dict['datetime_end'] = now_dt
                         attendance[k] = {'datetime_started': single_dict['datetime_started'], 'duration': single_dict['duration'], 'datetime_end': single_dict['datetime_end']}
-                    # single_dict['duration'] += duration
-                    # single_dict['datetime_end'] = now_dt
+
 
         except IOError:
             print('File with attendance session has not been found. Creating new file')
@@ -216,8 +214,7 @@ def task():
 
         for i in range(len(devices_in_range.copy())):
             inner_list.append({devices_in_range[i]['mac']: {'datetime_started': None, 'duration': 0, 'datetime_end': None}})
-        print(inner_list)
-        #inner_list = list(set(inner_list))
+
         current_datetime_read = datetime.now()
         if last_datetime_read is None:
             last_datetime_read = current_datetime_read
@@ -225,19 +222,6 @@ def task():
             duration = datetime.now() - last_datetime_read #timedelta seconds
             write_data_to_file(dict_arr = inner_list, duration = duration.seconds)
             last_datetime_read = current_datetime_read
-        
-        # last = set(last_items)
-        # current = set(inner_list)
-        
-        # if last == current:
-        #     print("No changes in list")
-        # else:
-        #     #Do work here
-        #     print("Changes in list has been detected")
-        #     print('\nSymetric difference for items: ', last^current)
-        #     print('\nIntersection last(curr)      : ', last.intersection(current))
-
-        
         
         last_items = inner_list
         print("\ncurrent list: ", len(inner_list))
@@ -257,7 +241,6 @@ async def main():
     schedule.every(5).seconds.do(task)
     schedule.every(120).seconds.do(send_data_to_api)
 
-    #schedule.every(15).seconds.do()
     count = 0
     while(True):
         print(f'job {count}:\n')
