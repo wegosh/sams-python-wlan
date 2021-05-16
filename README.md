@@ -74,7 +74,7 @@ SAMS py-wlan discovery uses Python with multiple packages to make calls to api a
 
 Smart Attendance Monitoring System runs on 
 - [ ] \(Not supported) &nbsp; ~~Windows~~ 
-- [-] \(Not Tested) &nbsp; MacOS
+- [ ] \(Not Tested) &nbsp; MacOS
 - [x] Linux &nbsp; ```Recommended```
 
 Install the required files
