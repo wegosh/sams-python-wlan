@@ -67,7 +67,7 @@ SAMS py-wlan discovery uses Python with multiple packages to make calls to api a
 - [Schedule v1.1.0][schedule] - Schedule package is used to schedule task and run them in fixed time intervals
 
 
-```*```&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ```- currently not used```
+```*```&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ```- currently not used```\
 ```**``` &nbsp;&nbsp;&nbsp;&nbsp;```- Access Point(s)```
 
 # Installation
