@@ -54,7 +54,7 @@ SAMS py-wlan discovery uses Python with multiple packages to make calls to api a
 
 - [RaspianOS][raspios] - Linux distribution for Raspberry PI
 - [RaspberryPI 4B][raspi] - Device used as a server
-- [Sagecom cs50001][router] - Router used for testing the script **
+- _Sagecom cs50001_ - Router used for testing the script **
 
 ### Frameworks
 
@@ -141,6 +141,7 @@ async def main():
 [rssi]: <https://pypi.org/project/rssi/>
 [schedule]: <https://pypi.org/project/schedule/>
 [raspios]: <https://www.raspberrypi.org/software/operating-systems/>
+[raspi]: <https://www.raspberrypi.org/products/raspberry-pi-4-model-b/?variant=raspberry-pi-4-model-b-8gb>
 [my_email]: <mailto:P17237274@my365.dmu.ac.uk>
 
 [sams-ios]: <https://github.com/wegosh/sams-ios-main>
